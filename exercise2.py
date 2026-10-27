@@ -36,25 +36,52 @@ print(final_condition)
 # Question 3: Conditional Statements
 
 # TODO: Ask the user to input a test score (0-100) and store it in a variable called 'score'
-
+score = float(input("Enter a test score (0-100): "))
 # TODO: Implement a grading system using if-elif-else statements:
 #       90-100: A
 #       80-89: B
 #       70-79: C
 #       60-69: D
 #       Below 60: F
+if 90 <= score <= 100:
+    grade = "A"
+elif 80 <= score <= 90:
+    grade = "B"
+elif 70 <= score <= 80:
+    grade = "C"
+elif 60 <= score <= 70:
+    grade = "D"
+else:
+    grade = "F"
+
 
 # TODO: Print the grade for the given score
-
+print(f"Grade:{grade}")
 #------------------------------------------------------------------------------------
 # Question 4: Combining Operators and Conditionals
 
 # TODO: Ask the user to input two numbers and store them in variables 'num1' and 'num2'
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
 
 # TODO: Ask the user to input an operation (+, -, *, /) and store it in a variable called 'operation'
-
+operation = input ("Enter an operation (+,-,*,/):")
 # TODO: Use conditional statements to perform the chosen operation on num1 and num2
 # TODO: Handle the case of division by zero
-
+if operation == '+':
+    result = num1 + num2
+    print(f"Result: {result}")
+elif operation == '-':
+    result = num1 - num2
+    print(f"Result: {result}")
+elif operation == '*':
+    result = num1 * num2
+    print(f"Result: {result}")
+elif operation == '/':
+    if num2 == 0:
+        print("Error: Division by zero is not allowed")
+    else:
+        result = num1 / num2
+        print(f"Result: {result}")
 
 # TODO: Print the result of the operation
